@@ -1,44 +1,11 @@
 {
   "name": "limena",
-  "description": "limena's official marketplace — connect accessibility audits, fix-story generation, and program management to Claude.",
-  "owner": {
-    "name": "limena",
-    "email": "ryan@limena.app",
-    "url": "https://limena.app"
-  },
-  "homepage": "https://limena.app",
   "plugins": [
     {
       "name": "limena-audit",
-      "displayName": "limena — accessibility audits",
-      "description": "Drive limena's hosted accessibility audit platform from Claude. Conversational flow: pick a client, pick a program, queue audits across one or many URLs, poll until ready, summarize findings, and apply fix stories. Pairs axe-core deterministic detection with an LLM heuristic engine for content-quality checks (alt text, link text, sensory cues, error messages, language) — ~96% WCAG 2.2 AA coverage. Use when the user wants accessibility audits, WCAG compliance, AODA / Accessible Canada Act / Section 508 / EN 301 549 / Quebec Law 25 reporting, or to fetch findings from a previous limena audit.",
+      "description": "Audit any web URL for WCAG 2.2 AA accessibility via limena's hosted platform. Conversational flow walks 'which client → which program → which URLs → audit'. Pairs axe-core with an LLM heuristic engine for ~96% WCAG 2.2 AA coverage. Use when the user wants accessibility audits, WCAG compliance, or AODA / ADA / Section 508 / EN 301 549 reporting.",
       "version": "0.1.0",
-      "homepage": "https://limena.app/connect",
-      "documentation": "https://limena.app/connect",
-      "icon": "https://limena.app/brand/limena-mark.svg",
-      "tags": ["accessibility", "wcag", "a11y", "audit", "axe-core"],
-      "mcpServers": {
-        "limena": {
-          "type": "http",
-          "url": "https://console.limena.app/api/mcp",
-          "headers": {
-            "Authorization": "Bearer ${LIMENA_API_KEY}"
-          }
-        }
-      },
-      "configSchema": {
-        "type": "object",
-        "required": ["LIMENA_API_KEY"],
-        "properties": {
-          "LIMENA_API_KEY": {
-            "type": "string",
-            "title": "limena API key",
-            "description": "Your workspace API key. Generate one at https://console.limena.app/settings/api-keys (Read + Write scopes recommended for conversational use).",
-            "pattern": "^lmn_[a-f0-9]+$",
-            "format": "password"
-          }
-        }
-      }
+      "source": "./plugins/limena-audit"
     }
   ]
 }
