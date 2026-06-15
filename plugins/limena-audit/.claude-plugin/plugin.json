@@ -1,0 +1,13 @@
+{
+  "name": "limena-audit",
+  "description": "Accessibility audits powered by limena. Picks a client and program, queues audits across one or many URLs, polls status, and turns findings into actionable fix stories. Pairs axe-core with an LLM heuristic engine for ~96% WCAG 2.2 AA coverage.",
+  "version": "0.1.0",
+  "author": {
+    "name": "limena",
+    "email": "ryan@limena.app"
+  },
+  "homepage": "https://limena.app/connect",
+  "repository": "https://github.com/rshortux/limena-plugins",
+  "license": "MIT",
+  "keywords": ["accessibility", "wcag", "a11y", "audit"]
+}

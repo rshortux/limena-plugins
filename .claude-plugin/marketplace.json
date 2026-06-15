@@ -1,11 +1,18 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "limena",
+  "description": "limena's official plugin catalog — accessibility audits, WCAG fix stories, and program management for Claude.",
+  "owner": {
+    "name": "limena",
+    "email": "ryan@limena.app"
+  },
   "plugins": [
     {
       "name": "limena-audit",
-      "description": "Audit any web URL for WCAG 2.2 AA accessibility via limena's hosted platform. Conversational flow walks 'which client → which program → which URLs → audit'. Pairs axe-core with an LLM heuristic engine for ~96% WCAG 2.2 AA coverage. Use when the user wants accessibility audits, WCAG compliance, or AODA / ADA / Section 508 / EN 301 549 reporting.",
-      "version": "0.1.0",
-      "source": "./plugins/limena-audit"
+      "source": "./plugins/limena-audit",
+      "description": "Drive limena's hosted accessibility audit platform from Claude. Conversational flow walks 'which client → which program → which URLs', queues audits, polls until ready, summarises findings, and generates fix stories. Pairs axe-core with an LLM heuristic engine for ~96% WCAG 2.2 AA coverage. Use for accessibility audits, WCAG compliance, AODA / ADA / Section 508 / EN 301 549 reporting.",
+      "category": "development",
+      "keywords": ["accessibility", "wcag", "a11y", "audit", "axe-core"]
     }
   ]
 }

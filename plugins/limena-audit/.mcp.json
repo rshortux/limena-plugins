@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "limena": {
+      "type": "http",
+      "url": "https://console.limena.app/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${LIMENA_API_KEY}"
+      }
+    }
+  }
+}
